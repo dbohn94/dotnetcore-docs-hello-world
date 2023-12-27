@@ -12,6 +12,7 @@
 </head>
 <body>
     <header>
+        <!-- Navigation bar here -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">databohn.com</a>
@@ -40,16 +41,17 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-            @RenderBody()
+            @RenderBody() <!-- This is where the content of your views will be rendered -->
+    </div>
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted"> <!-- Footer content here -->
         <div class="container">
             &copy; 2023 - David Bohn - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
-
+    <!-- Include JavaScript files here -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
