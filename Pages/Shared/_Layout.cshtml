@@ -4,15 +4,37 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - databohn.com</title>
+    <link rel="stylesheet" href="styles.css">
+    
     <link rel="icon" href="~/lib/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="~/lib/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/dotnetcoresample.styles.css" asp-append-version="true" />
+    
 </head>
 <body>
     <header>
         <!-- Navigation bar here -->
+        <img src="Logodb1.png" alt="Company Logo" id="company-logo">
+        
+        <style>
+            .navbar-nav {
+                display: flex;
+                justify-content: center;
+                list-style-type: none;
+            }
+
+            .navbar-nav .nav-item {
+                margin: 0 10px;
+            }
+        </style>
+
+
+
+    </header>
+        
+        
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">databohn.com</a>
@@ -26,19 +48,19 @@
                             <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link" asp-area="" asp-page="/Projects">Projects</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-page="/ContactMe">Contact Me</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Projects">Projects</a>
+                            <a class="nav-link" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-    </header>
+       
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody() <!-- This is where the content of your views will be rendered -->
@@ -46,9 +68,22 @@
         </main>
     </div>
 
+<div class="slider">
+  <div class="slide fade">
+    <img src="slide1.jpg" style="width:100%">
+  </div>
+  <div class="slide fade">
+    <img src="slide2.jpg" style="width:100%">
+  </div>
+  <div class="slide fade">
+    <img src="slide3.jpg" style="width:100%">
+  </div>
+</div>
+
+
     <footer class="border-top footer text-muted"> <!-- Footer content here -->
         <div class="container">
-            &copy; 2023 - David Bohn - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2024 - David Bohn - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
     <!-- Include JavaScript files here -->
