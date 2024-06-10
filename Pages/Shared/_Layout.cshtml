@@ -10,62 +10,47 @@
     <link rel="shortcut icon" href="~/lib/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/dotnetcoresample.styles.css" asp-append-version="true" />
-    
+    @*(<link rel="stylesheet" href="~/dotnetcoresample.styles.css" asp-append-version="true" />*@
+    <link rel="stylesheet" href="~/themes/styles.css" asp-append-version="true" />
+
 </head>
 <body>
-@Html.Partial("_Navbar")
-@*
-    <header>
-        <!-- Navigation bar here -->
-        <img src="Logodb1.png" alt="Company Logo" id="company-logo">
-        
-        <style>
-            .navbar-nav {
-                display: flex;
-                justify-content: center;
-                list-style-type: none;
-            }
+    <partial name="_Navbar" />
 
-            .navbar-nav .nav-item {
-                margin: 0 10px;
-            }
-        </style>
-
-
-
-    </header>
-    *@    
-      @*  
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">databohn.com</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Projects">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Articles">Articles</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/ContactMe">Contact Me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-       *@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Bohn</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #343a40 !important;
+        }
+        .jumbotron {
+            background-color: #007bff;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .feature {
+            background-color: #ffffff;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody() <!-- This is where the content of your views will be rendered -->
@@ -95,6 +80,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~themes/scripts.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
