@@ -23,8 +23,7 @@ jobs:
           include-prerelease: true
 
       - name: Build
-        run: dotnet build --configuration Release
-        working-directory: ./
+        run: dotnet build dotnetcore-docs-hello-world.sln --no-restore
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
