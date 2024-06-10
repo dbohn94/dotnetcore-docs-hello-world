@@ -14,6 +14,8 @@
     
 </head>
 <body>
+@Html.Partial("_Navbar")
+@*
     <header>
         <!-- Navigation bar here -->
         <img src="Logodb1.png" alt="Company Logo" id="company-logo">
@@ -33,8 +35,8 @@
 
 
     </header>
-        
-        
+    *@    
+      @*  
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">databohn.com</a>
@@ -63,7 +65,7 @@
                 </div>
             </div>
         </nav>
-       
+       *@
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody() <!-- This is where the content of your views will be rendered -->
