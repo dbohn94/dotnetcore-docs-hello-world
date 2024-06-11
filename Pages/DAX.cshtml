@@ -1,0 +1,92 @@
+@page
+@{
+    ViewData["Title"] = "Contact Me";
+    Layout = "_Layout";
+}
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Agency - Start Bootstrap Theme</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">DAX References</h1>
+        <p class="lead">A collection of common and useful measure calculations.</p>
+    </div>
+</div>
+
+<style>
+    .code-container {
+        position: relative;
+        padding: 10px;
+        background-color: #f5f5f5;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1; 
+    }
+</style>
+<h2 style="text-align: left;">Product Metrics</h2>
+<div class="feature">
+    <div class="container" >
+        <h5 style="text-align: left;">Avg Daily Active Users</h5>
+        <div style="text-align: left;" >
+            <div class="code-container">
+                <button class="btn" data-clipboard-target=".language-dax">Copy</button>
+                <pre class="line-numbers" style="margin: 0;">
+<code class="language-dax">CALCULATE (
+        AVERAGEX (
+            VALUES ( DimCalendar[DateValue] ),
+            CALCULATE ( DISTINCTCOUNT ( DimNVDUsage[UserPrincipalName] ) )
+        ),
+        FILTER (
+            DimCalendar,
+            DimCalendar[IsBusinessDay] = "1"
+                && DimCalendar[DateValue]
+                    > TODAY () - 30
+                && DimCalendar[DateValue] <= TODAY ()
+        )
+    )</code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Bootstrap JS and jQuery -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-dax.min.js"></script>
+    <script src="/powerbi-client/dist/powerbi.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    @* <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script> *@
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+
+</body>
+</html>

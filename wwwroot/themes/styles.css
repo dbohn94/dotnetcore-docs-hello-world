@@ -11319,3 +11319,19 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+/* Change the color of keywords to blue */
+.language-dax .token.keyword {
+    color: blue;
+}
+
+/* Change the color of functions to green */
+.language-dax .token.function {
+    color: green;
+}
+
+/* Change the color of strings to red */
+.language-dax .token.string {
+    color: red;
+}
+
